@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Gabes Math Tutorials</title>
+<style>
+body, button { margin: 0; font-family: Arial, sans-serif; }
+body { background: #333; color: #ff0000; overflow: hidden; }
+.header { background: #222; padding: 15px; text-align: center; }
+.header h1 { margin: 0; font-size: 32px; color: #ff0000; }
+.sidebar { position: fixed; top: 80px; left: 20px; width: 200px; }
+.nav-link { display: block; margin-bottom: 10px; font-size: 16px; color: #ff0000; text-decoration: none; transition: color 0.3s; }
+.nav-link:hover { color: #ccc; }
+.iframe-container { position: fixed; top: 80px; left: 240px; right: 20px; bottom: 20px; box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); border-radius: 15px; overflow: hidden; }
+iframe { border: none; width: 100%; height: 100%; }
+.favicon-button, .name-button { display: block; margin: 20px auto; padding: 10px 20px; background: #ff0000; color: white; border: none; border-radius: 5px; cursor: pointer; transition: background 0.3s; }
+.favicon-button:hover, .name-button:hover { background: #8c0000; }
+.favicon-selector, .name-input { display: none; background: #222; color: #ff0000; border: none; border-radius: 5px; padding: 5px; margin-top: 5px; font-size: 14px; }
+.favicon-selector option { background: #222; color: #ff0000; }
+</style>
+</head>
+<body>
+<div class="header">
+<h1>Gabes Math Tutorials</h1>
+</div>
+<div class="sidebar">
+<a class="nav-link" href="#tinfoil-proxy" onclick="loadPage('https://order.fastservices.buzz/index.html')">TinF0il Proxy</a>
+<a class="nav-link" href="#rammerhead-generator" onclick="loadPage('https://rammerhead-gen.glitch.me/')">Rammerhead Proxy Generator</a>
+<a class="nav-link" href="#interstellar" onclick="loadPage('https://interstellars.games/photography')">Interstellar</a>
+<a class="nav-link" href="#rammerhead-proxy-1" onclick="loadPage('https://browser.fireboyandwatergirl.gq/')">Rammerhead Proxy 1</a>
+<a class="nav-link" href="#rammerhead-proxy-2" onclick="loadPage('https://report.bullying.at.school.now.disord.tk/')">Rammerhead Proxy 2</a>
+<a class="nav-link" href="#rammerhead-proxy-3" onclick="loadPage('https://m.a.t.h.yefimc.tk/')">Rammerhead Proxy 3</a>
+<a class="nav-link" href="#now-gg" onclick="loadPage('https://now.gg')">Now.gg</a>
+<a class="nav-link" href="#gabes-proxy" onclick="loadPage('https://your-custom-proxy-url')">Gabes Proxy</a>
+<button class="favicon-button" onclick="toggleFaviconSelector()">Choose Favicon</button>
+<select class="favicon-selector" onchange="changeFavicon(this)">
+<option value="https://www.google.com/favicon.ico">Google Favicon</option>
+<option value="https://www.google.com/images/icons/product/chrome-32.png">Incognito Favicon</option>
+</select>
+<button class="name-button" onclick="toggleNameInput()">Name Cloaker</button>
+<input class="name-input" type="text" placeholder="Enter tab name" onblur="changeTabName(this)">
+</div>
+<div class="iframe-container">
+<iframe id="proxyFrame"></iframe>
+</div>
+<script>
+const proxyFrame = document.getElementById('proxyFrame');
+const faviconSelector = document.querySelector('.favicon-selector');
+const nameInput = document.querySelector('.name-input');
+
+function loadPage(url) {
+  proxyFrame.src = url;
+}
+
+function toggleFaviconSelector() {
+  faviconSelector.classList.toggle('favicon-selector');
+}
+
+function changeFavicon(selector) {
+  const selectedFavicon = selector.value;
+  const link = document.querySelector("link[rel*='icon']") || document.createElement('link');
+  link.type = 'image/x-icon';
+  link.rel = 'shortcut icon';
+  link.href = selectedFavicon;
+  document.getElementsByTagName('head')[0].appendChild(link);
+}
+
+function toggleNameInput() {
+  nameInput.classList.toggle('name-input');
+}
+
+function changeTabName(input) {
+  document.title = input.value.trim() || "Gabes Math Tutorials";
+}
+</script>
+</body>
+</html>
